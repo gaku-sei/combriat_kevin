@@ -67,10 +67,10 @@
   }
 
   .educations-institution-details {
-    @apply flex flex-col md:flex-row justify-between font-semibold text-lg pt-4;
+    @apply flex flex-col sm:flex-row justify-between font-semibold text-lg pt-4;
   }
 
   .educations-place {
-    @apply self-end md:self-auto;
+    @apply self-end sm:self-auto;
   }
 </style>

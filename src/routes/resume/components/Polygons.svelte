@@ -2,7 +2,7 @@
   import { verticesToPolygonPoints, type Vertices } from "$lib/drawings";
 
   type Props = {
-    polygons: (size: number) => { opacity: number; vertices: Vertices }[];
+    polygons: (size: number) => { opacity?: number; vertices: Vertices }[];
   };
 
   let { polygons: polygonsBuilder } = $props<Props>();
@@ -18,9 +18,9 @@
   viewBox="0 0 {size} {size}"
   preserveAspectRatio="none"
 >
-  {#each polygons as { opacity, vertices }}
+  {#each polygons as { opacity = 1, vertices }}
     <polygon
-      fill="rgb(129 140 248)"
+      fill="rgb(224 231 255)"
       {opacity}
       points={verticesToPolygonPoints(vertices)}
     />
