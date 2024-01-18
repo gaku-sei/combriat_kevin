@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      body: '"Sometype Mono"',
+      body: '"Nunito"',
     },
   },
   plugins: [],

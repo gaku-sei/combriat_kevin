@@ -12,7 +12,7 @@
 
   const polygonsLeft = (size: number) => [
     {
-      opacity: 0.2,
+      opacity: 0.7,
       vertices: [
         [0, 0],
         [size * 0.72, 0],
@@ -24,7 +24,6 @@
   ];
   const polygonsRight = (size: number) => [
     {
-      opacity: 0.2,
       vertices: [
         [size, 0],
         [size * 0.28, 0],
@@ -38,9 +37,13 @@
 
 <div class="works">
   <div class="works-label">Professional Experience</div>
-
-  {#each works as { position, company, industry, website, place, start_date, end_date, highlights, summary }, i (company)}
+  {#each works as { position, company, industry, website, place, start_date, end_date, skills, highlights, summary }, i (company)}
     {@const odd = i & 1}
+    {#if i > 0}
+      <div class="works-separator-wrapper">
+        <hr class="works-separator" />
+      </div>
+    {/if}
     <div class="works-entry">
       <div class="works-polygons" class:works-polygons-left={odd}>
         {#if odd}
@@ -56,28 +59,44 @@
         <div class="works-position-details">
           <div class="works-company">
             {#if website}
-              <Link href={website}>{company}</Link>, {place}
+              <Link href={website}>{company}</Link>
             {:else}
-              {company}, {place}
+              {company}
             {/if}
-            {#if industry}
-              <span class="text-sm">({industry})</span>
-            {/if}
+            <span class="works-company-details">
+              {place}
+              {#if industry}
+                <span class="text-sm">({industry})</span>
+              {/if}
+            </span>
           </div>
           <div class="works-dates">
-            {formatDate(new Date(start_date))} - {formatDate(
-              new Date(end_date),
-            )}
+            {formatDate(new Date(start_date))} - {end_date
+              ? formatDate(new Date(end_date))
+              : "Present"}
           </div>
         </div>
+        {#if skills && skills.length > 0}
+          <div class="works-skills">
+            <span class="works-skills-label">
+              <em>Skills:</em>
+            </span>
+            {#each skills as skill, i}
+              {#if i > 0}, {" "}
+              {/if}<span class="works-skills-name">{@html skill}</span>
+            {/each}
+          </div>
+        {/if}
         <ul class="works-highlights">
           {#each highlights as highlight}
             <li>{@html highlight}</li>
           {/each}
         </ul>
-        <div class="works-summary">
-          {@html summary}
-        </div>
+        {#if summary}
+          <div class="works-summary">
+            {@html summary}
+          </div>
+        {/if}
       </div>
     </div>
   {/each}
@@ -85,11 +104,19 @@
 
 <style lang="postcss">
   .works {
-    @apply w-full pt-12;
+    @apply w-full pt-6;
   }
 
   .works-label {
-    @apply font-semibold text-2xl px-8;
+    @apply font-semibold text-2xl px-8 pb-10;
+  }
+
+  .works-separator-wrapper {
+    @apply flex justify-center py-12;
+  }
+
+  .works-separator {
+    @apply h-0.5 w-4/5 bg-indigo-200 rounded;
   }
 
   .works-entry {
@@ -97,7 +124,7 @@
   }
 
   .works-polygons {
-    @apply absolute right-0 top-28 w-40 h-44 pointer-events-none;
+    @apply absolute right-0 top-0 w-40 h-44 pointer-events-none;
   }
 
   .works-polygons-left {
@@ -105,19 +132,35 @@
   }
 
   .works-content {
-    @apply px-8;
+    @apply relative px-8;
+  }
+
+  .works-company-details {
+    @apply text-sm;
   }
 
   .works-position {
-    @apply pt-8 font-semibold text-xl text-indigo-400;
+    @apply font-semibold text-xl text-indigo-400;
   }
 
   .works-position-details {
-    @apply flex flex-col md:flex-row justify-between font-semibold text-lg pt-4;
+    @apply flex flex-col sm:flex-row justify-center sm:justify-between sm:items-center font-semibold text-lg pt-4 gap-2;
   }
 
   .works-dates {
-    @apply self-end md:self-auto shrink-0;
+    @apply self-end sm:self-auto shrink-0 text-sm;
+  }
+
+  .works-skills {
+    @apply px-6 py-4 text-center;
+  }
+
+  .works-skills-label {
+    @apply text-base;
+  }
+
+  .works-skills-name {
+    @apply text-indigo-800 text-base;
   }
 
   .works-highlights {
