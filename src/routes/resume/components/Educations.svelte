@@ -23,10 +23,10 @@
           {/if}
         </div>
         <div class="educations-institution-details">
-          <div class="educations-company">
+          <div class="educations-place">
             {area}, {place}
           </div>
-          <div class="educations-place">
+          <div class="educations-dates">
             {formatDate(new Date(start_date))} - {formatDate(
               new Date(end_date),
             )}
@@ -67,10 +67,10 @@
   }
 
   .educations-institution-details {
-    @apply flex flex-col sm:flex-row justify-between font-semibold text-lg pt-4;
+    @apply flex flex-col sm:flex-row justify-center sm:justify-between sm:items-center font-semibold text-lg pt-4;
   }
 
-  .educations-place {
-    @apply self-end sm:self-auto;
+  .educations-dates {
+    @apply self-end sm:self-auto shrink-0 text-sm;
   }
 </style>

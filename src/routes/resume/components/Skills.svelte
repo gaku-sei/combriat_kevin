@@ -23,7 +23,7 @@
 
 <style lang="postcss">
   .skills {
-    @apply w-full pt-12;
+    @apply w-full pt-12 break-inside-avoid;
   }
 
   .skills-label {

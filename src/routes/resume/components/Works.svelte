@@ -38,66 +38,68 @@
 <div class="works">
   <div class="works-label">Professional Experience</div>
   {#each works as { position, company, industry, website, place, start_date, end_date, skills, highlights, summary }, i (company)}
-    {@const odd = i & 1}
-    {#if i > 0}
-      <div class="works-separator-wrapper">
-        <hr class="works-separator" />
-      </div>
-    {/if}
-    <div class="works-entry">
-      <div class="works-polygons" class:works-polygons-left={odd}>
-        {#if odd}
-          <Polygons polygons={polygonsLeft} />
-        {:else}
-          <Polygons polygons={polygonsRight} />
-        {/if}
-      </div>
-      <div class="works-content">
-        <div class="works-position">
-          {position}
+    <div class="works-entry-wrapper">
+      {@const odd = i & 1}
+      <div class="works-entry" class:pt-8={i > 0}>
+        <div class="works-polygons" class:works-polygons-left={odd}>
+          {#if odd}
+            <Polygons polygons={polygonsLeft} />
+          {:else}
+            <Polygons polygons={polygonsRight} />
+          {/if}
         </div>
-        <div class="works-position-details">
-          <div class="works-company">
-            {#if website}
-              <Link href={website}>{company}</Link>
-            {:else}
-              {company}
-            {/if}
-            <span class="works-company-details">
-              {place}
-              {#if industry}
-                <span class="text-sm">({industry})</span>
+        <div class="works-content">
+          <div class="works-position">
+            {position}
+          </div>
+          <div class="works-position-details">
+            <div class="works-company">
+              {#if website}
+                <Link href={website}>{company}</Link>
+              {:else}
+                {company}
               {/if}
-            </span>
+              <span class="works-company-details">
+                {place}
+                {#if industry}
+                  <span class="text-sm">({industry})</span>
+                {/if}
+              </span>
+            </div>
+            <div class="works-dates">
+              {formatDate(new Date(start_date))} - {end_date
+                ? formatDate(new Date(end_date))
+                : "Present"}
+            </div>
           </div>
-          <div class="works-dates">
-            {formatDate(new Date(start_date))} - {end_date
-              ? formatDate(new Date(end_date))
-              : "Present"}
-          </div>
-        </div>
-        {#if skills && skills.length > 0}
-          <div class="works-skills">
-            <span class="works-skills-label">
-              <em>Skills:</em>
-            </span>
-            {#each skills as skill, i}
-              {#if i > 0}, {" "}
-              {/if}<span class="works-skills-name">{@html skill}</span>
+          {#if skills && skills.length > 0}
+            <div class="works-skills">
+              <span class="works-skills-label">
+                <em>Skills:</em>
+              </span>
+              {#each skills as skill, i}
+                {#if i > 0}, {" "}
+                {/if}<span class="works-skills-name">{@html skill}</span>
+              {/each}
+            </div>
+          {/if}
+          <ul class="works-highlights">
+            {#each highlights as highlight}
+              <li>{@html highlight}</li>
             {/each}
-          </div>
-        {/if}
-        <ul class="works-highlights">
-          {#each highlights as highlight}
-            <li>{@html highlight}</li>
-          {/each}
-        </ul>
-        {#if summary}
-          <div class="works-summary">
-            {@html summary}
-          </div>
-        {/if}
+          </ul>
+          {#if summary}
+            <div class="works-summary">
+              {@html summary}
+            </div>
+          {/if}
+        </div>
       </div>
+      {#if i + 1 < works.length}
+        <div class="works-separator-wrapper">
+          <hr class="works-separator" />
+        </div>
+      {/if}
     </div>
   {/each}
 </div>
@@ -108,11 +110,15 @@
   }
 
   .works-label {
-    @apply font-semibold text-2xl px-8 pb-10;
+    @apply font-semibold text-2xl px-8 pb-8;
+  }
+
+  .works-entry-wrapper {
+    @apply break-inside-avoid;
   }
 
   .works-separator-wrapper {
-    @apply flex justify-center py-12;
+    @apply flex justify-center pt-8;
   }
 
   .works-separator {
@@ -124,7 +130,7 @@
   }
 
   .works-polygons {
-    @apply absolute right-0 top-0 w-40 h-44 pointer-events-none;
+    @apply absolute right-0 top-8 w-40 h-44 pointer-events-none;
   }
 
   .works-polygons-left {

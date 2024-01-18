@@ -35,19 +35,25 @@
 
 <style lang="postcss">
   .resume {
-    @apply relative flex flex-col sm:flex-row w-full max-w-[880px] print:w-full bg-slate-100 print:bg-white break-words;
+    @apply relative flex flex-col sm:flex-row w-full max-w-[880px] print:w-full bg-slate-100 print:bg-white break-words h-full sm:h-screen print:h-full;
   }
 
   .profile {
-    @apply w-full sm:w-[280px] bg-indigo-100 shrink-0 bg-opacity-70;
+    @apply w-full sm:w-[280px] bg-indigo-100 shrink-0 bg-opacity-70 overflow-auto sticky pb-0;
+  }
+
+  @media print {
+    .profile {
+      mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    }
   }
 
   .experience {
-    @apply shrink grow overflow-hidden pb-20 print:pb-0;
+    @apply pb-20 print:pb-0 overflow-auto;
   }
 
   .experience-header-wrapper {
-    @apply hidden sm:flex w-full px-6 pt-2 pb-1;
+    @apply hidden sm:flex w-full px-6 pt-2 pb-1 static sm:sticky print:static top-0 z-10 bg-slate-100 print:bg-white;
   }
 
   .experience-header {
