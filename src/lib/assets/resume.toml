@@ -3,10 +3,10 @@ last_name = "Combriat"
 first_name = "Kévin"
 email = "japan.combriat.kevin@gmail.com"
 position = """
-Senior Full-Stack Programmer
+Senior Full-Stack Engineer
 """
 about = """
-Versatile and technology-agnostic programmer with over **12 years** of experience in **front-end** and **back-end** development.  
+Versatile and technology-agnostic engineer with over **12 years** of experience in **front-end** and **back-end** development.  
 
 Committed to delivering exceptional user experiences through **web applications** and desktop interfaces.
 """
@@ -37,12 +37,20 @@ name = "Web Development"
 duration = "12 Years"
 
 [[basics.skills]]
+name = "AWS"
+duration = "5 Years"
+
+[[basics.skills]]
 name = "TypeScript"
 duration = "8 Years"
 
 [[basics.skills]]
+name = "Node"
+duration = "8 Years"
+
+[[basics.skills]]
 name = "Rust"
-duration = "2 Years"
+duration = "3 Years"
 
 [[basics.skills]]
 name = "Go"
@@ -50,11 +58,19 @@ duration = "1 Year"
 
 [[basics.skills]]
 name = "Python"
-duration = "1 Year"
+duration = "2 Years"
 
 [[basics.skills]]
 name = "JavaScript"
 duration = "12 Years"
+
+[[basics.skills]]
+name = "React"
+duration = "8 Years"
+
+[[basics.skills]]
+name = "Svelte"
+duration = "2 Years"
 
 [[basics.skills]]
 name = "ReScript (ReasonML)"
@@ -66,22 +82,6 @@ duration = "2 Years"
 
 [[basics.skills]]
 name = "PHP"
-duration = "2 Years"
-
-[[basics.skills]]
-name = "Node"
-duration = "8 Years"
-
-[[basics.skills]]
-name = "React"
-duration = "8 Years"
-
-[[basics.skills]]
-name = "AWS"
-duration = "5 Years"
-
-[[basics.skills]]
-name = "Svelte"
 duration = "2 Years"
 
 [[basics.skills]]
@@ -112,7 +112,7 @@ username = "gaku-sei"
 
 [[works]]
 company = "Haven Studios - Sony"
-position = "Senior Generalist Programmer"
+position = "Senior Full-Stack Engineer"
 place = "Remote from Kyoto, Japan"
 start_date = "2022-07-01T00:00:00.000Z"
 skills = [
@@ -128,36 +128,36 @@ skills = [
   "Parquet",
 ]
 highlights = [
-  "Working on a large scale **Telemetry** and **Observability** project",
-  "Crafting **high-performance** online services in **Rust**",
-  "Driving front-end architecture with **TypeScript** and **Svelte**",
-  "Designing and implementing robust infrastructure using **AWS**, **GCP**, and **Terraform**",
+  "Leading a large-scale **Telemetry** and **Observability** project utilized company-wide at Haven",
+  "Building **high-performance** online services using **Rust**'s memory safety and speed",
+  "Leading front-end architecture using **TypeScript** and **Svelte** for optimal performance in our canvas",
+  "Architecting robust infrastructure on **AWS** with **Terraform** to accommodate potential millions of players",
   "Developing Big Data system in **Rust** with Parquet, Arrow, and **DataFusion**",
-  "Prioritizing performance and optimization across projects",
-  "Key role in **Grafana** plugin development in **Go**",
-  "Developing low-level Rust Wasm plugins",
+  "Prioritizing performance and optimization, resulting in significant improvements (front page load time reduced by 95%, allocation-free structured log events with exceptional performance, etc...)",
+  "Playing a pivotal role in **Grafana** plugin development in **Go**, granting team members access to all the resources in our **lakehouse**",
+  "Developing low-level **Rust** **Wasm** plugins for browser use, compatible with our Telemetry architecture and maintaining high performance standards",
 ]
 website = "https://havenstudios.com/"
 
 [[works]]
 company = "Legion Labs"
-position = "Senior Tools Specialist"
+position = "Senior Full-Stack Engineer"
 place = "Montréal, Canada"
 start_date = "2021-11-14T00:00:00.000Z"
 end_date = "2022-07-01T00:00:00.000Z"
 skills = ["Rust", "TypeScript", "Svelte", "AWS", "Terraform", "Node", "Tauri"]
 highlights = [
   "Contributed to cutting-edge tech stack with **Rust**, **TypeScript**, and **Python**",
-  "Led design and development of a game engine gui application built with **TypeScript**, **Svelte**, **Tauri**, and **Rust**",
-  "Developed **Rest** and **gRpc** services in **Rust**",
-  "Engineered advanced command line applications in **Rust**",
+  "Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, **Svelte** akin to Unreal or Unity, featuring streaming capabilities akin to Stadia",
+  "Developed **REST** and **gRPC** services in Rust, prioritizing minimal memory footprint and CPU usage, and leveraging fully controlled memory management to prevent issues with garbage collection",
+  "Engineered advanced command line applications in **Rust**, including code generation for **Rust**, **TypeScript**, and **Python** for all our services based on **OpenAPI**, among other functionalities",
   "Integral part of Telemetry project, focusing on performance analysis and optimization",
 ]
 website = "https://legionlabs.com/"
 
 [[works]]
 company = "Scoville"
-position = "Front-End Developer - Web Team Lead"
+position = "Front-End Engineer - Web Team Lead"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2018-06-01T00:00:00.000Z"
 end_date = "2021-09-01T00:00:00.000Z"
@@ -181,7 +181,7 @@ website = "https://sc0ville.com/"
 
 [[works]]
 company = "Scoville - ATS Project"
-position = "Lead Full-Stack Developer"
+position = "Lead Full-Stack Engineer"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2021-02-01T00:00:00.000Z"
 end_date = "2021-09-01T00:00:00.000Z"
@@ -195,7 +195,7 @@ highlights = [
 
 [[works]]
 company = "Scoville - Mikketa Project"
-position = "Lead Front-End Developer"
+position = "Lead Front-End Engineer"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2020-02-01T00:00:00.000Z"
 end_date = "2021-02-01T00:00:00.000Z"
@@ -209,7 +209,7 @@ website = "https://mi-kketa.com/"
 
 [[works]]
 company = "Scoville - Encourage Project"
-position = "Lead Front-End Developer - Scrum master"
+position = "Lead Front-End Engineer - Scrum master"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2018-06-01T00:00:00.000Z"
 end_date = "2020-02-01T00:00:00.000Z"
@@ -225,13 +225,13 @@ website = "https://en-courage.com"
 
 [[works]]
 company = "Soat"
-position = "Full-stack web developer - Lead - Trainer"
+position = "Full-Stack Web Engineer - Lead - Trainer"
 place = "Paris, France"
 start_date = "2014-09-01T00:00:00.000Z"
 end_date = "2018-05-01T00:00:00.000Z"
 skills = ["TypeScript", "Node", "React"]
 highlights = [
-  "Worked as a **full-stack** developer/consultant",
+  "Worked as a **full-stack** engineer",
   "Developed and delivered training sessions in **React** and **Node**",
   "Actively participated in the web department development with the \"Expert Team\"",
 ]
@@ -239,7 +239,7 @@ website = "http://www.soat.fr/"
 
 [[works]]
 company = "BNP"
-position = "Lead developer - Architect"
+position = "Lead Engineer - Architect"
 place = "Paris, France"
 start_date = "2018-01-01T00:00:00.000Z"
 end_date = "2018-05-01T00:00:00.000Z"
@@ -255,7 +255,7 @@ website = "https://group.bnpparibas/en/"
 
 [[works]]
 company = "Société Générale"
-position = "Senior full-stack web developer"
+position = "Senior Full-Stack Web Engineer"
 place = "Paris, France"
 start_date = "2017-09-01T00:00:00.000Z"
 end_date = "2018-01-01T00:00:00.000Z"
@@ -270,7 +270,7 @@ website = "https://www.societegenerale.com/en/home"
 
 [[works]]
 company = "Radio France"
-position = "Senior full-stack web developer"
+position = "Senior Full-Stack Web Engineer"
 place = "Paris, France"
 start_date = "2016-09-01T00:00:00.000Z"
 end_date = "2017-09-01T00:00:00.000Z"
@@ -285,7 +285,7 @@ website = "http://www.radiofrance.fr/"
 
 [[works]]
 company = "TF1"
-position = "Lead full-stack web developer - Lead font-end developer"
+position = "Lead Full-Stack Web Engineer - Lead Front-End Engineer"
 place = "Paris, France"
 start_date = "2014-09-01T00:00:00.000Z"
 end_date = "2016-09-01T00:00:00.000Z"
@@ -302,7 +302,7 @@ website = "http://www.tf1.fr/"
 
 [[works]]
 company = "Tibanne"
-position = "Front-end developer"
+position = "Front-End Engineer"
 place = "Tokyo, Japan"
 start_date = "2013-11-01T00:00:00.000Z"
 end_date = "2014-08-15T00:00:00.000Z"
@@ -316,7 +316,7 @@ highlights = [
 
 [[works]]
 company = "-"
-position = "Full-stack web developer"
+position = "Full-Stack Engineer"
 place = "Paris, France"
 start_date = "2012-09-01T00:00:00.000Z"
 end_date = "2013-09-01T00:00:00.000Z"
@@ -330,7 +330,7 @@ highlights = [
 
 [[works]]
 company = "QuelleEnergie"
-position = "Full-stack web developer"
+position = "Full-Stack Engineer"
 place = "Paris, France"
 start_date = "2012-03-01T00:00:00.000Z"
 end_date = "2012-09-01T00:00:00.000Z"

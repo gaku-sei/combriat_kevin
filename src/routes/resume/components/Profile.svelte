@@ -77,12 +77,10 @@
           </Link>
         </li>
         <li>
-          <span>
-            {#each profile.profiles as { network, url }, i (network)}
-              {#if i !== 0}
-                &nbsp;-
-              {/if}
-              <Link href={url}>{network}</Link>
+          <span
+            >{#each profile.profiles as { network, url }, i (network)}{#if i !== 0}&nbsp;-&nbsp;{/if}<Link
+                href={url}>{network}</Link
+              >
             {/each}
           </span>
         </li>
