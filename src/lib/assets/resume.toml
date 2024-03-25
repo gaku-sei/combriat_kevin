@@ -115,6 +115,7 @@ company = "Haven Studios - Sony"
 position = "Senior Full-Stack Engineer"
 place = "Remote from Kyoto, Japan"
 start_date = "2022-07-01T00:00:00.000Z"
+context = "Team of 2"
 skills = [
   "Rust",
   "Go",
@@ -145,6 +146,7 @@ position = "Senior Full-Stack Engineer"
 place = "Montréal, Canada"
 start_date = "2021-11-14T00:00:00.000Z"
 end_date = "2022-07-01T00:00:00.000Z"
+context = "Sole developer with Front-End abilities"
 skills = ["Rust", "TypeScript", "Svelte", "AWS", "Terraform", "Node", "Tauri", "WebRTC"]
 highlights = [
   "Contributed to cutting-edge tech stack with **Rust**, **TypeScript**, and **Python**",
@@ -185,6 +187,7 @@ position = "Lead Full-Stack Engineer"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2021-02-01T00:00:00.000Z"
 end_date = "2021-09-01T00:00:00.000Z"
+context = "Team of 6"
 skills = ["TypeScript", "Node", "React", "ReScript", "GraphQL", "Next.js"]
 highlights = [
   "Led the overall technical management of ATS project",
@@ -199,6 +202,7 @@ position = "Lead Front-End Engineer"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2020-02-01T00:00:00.000Z"
 end_date = "2021-02-01T00:00:00.000Z"
+context = "Team of 5"
 skills = ["TypeScript", "Node", "React", "ReScript", "GraphQL"]
 highlights = [
   "Designed and implemented the front-end stack with **TypeScript**, **React**, **ReScript**, and **GraphQL**",
@@ -213,6 +217,7 @@ position = "Lead Front-End Engineer - Scrum master"
 place = "Tokyo - Kyoto, Japan"
 start_date = "2018-06-01T00:00:00.000Z"
 end_date = "2020-02-01T00:00:00.000Z"
+context = "Team of 6"
 skills = ["TypeScript", "Node", "React", "GraphQL"]
 highlights = [
   "Designed and implemented the front-end stack with **TypeScript** and **React**",
@@ -243,6 +248,7 @@ position = "Lead Engineer - Architect"
 place = "Paris, France"
 start_date = "2018-01-01T00:00:00.000Z"
 end_date = "2018-05-01T00:00:00.000Z"
+context = "Team of 8"
 skills = ["TypeScript", "Node", "React", "AWS"]
 highlights = [
   "Architected the front-end using **TypeScript**, **React**, **Redux**, and **RxJS**",
@@ -259,6 +265,7 @@ position = "Senior Full-Stack Web Engineer"
 place = "Paris, France"
 start_date = "2017-09-01T00:00:00.000Z"
 end_date = "2018-01-01T00:00:00.000Z"
+context = "Team of 12"
 skills = ["TypeScript", "Node", "React", "C#"]
 highlights = [
   "Implemented new features using **React** with **TypeScript**",
@@ -274,6 +281,7 @@ position = "Senior Full-Stack Web Engineer"
 place = "Paris, France"
 start_date = "2016-09-01T00:00:00.000Z"
 end_date = "2017-09-01T00:00:00.000Z"
+context = "Team of 5"
 skills = ["TypeScript", "Node", "React"]
 highlights = [
   "Led and developed the in-house RTE project in **TypeScript**, **React** and **Draft.js**",
@@ -289,6 +297,7 @@ position = "Lead Full-Stack Web Engineer - Lead Front-End Engineer"
 place = "Paris, France"
 start_date = "2014-09-01T00:00:00.000Z"
 end_date = "2016-09-01T00:00:00.000Z"
+context = "Team of 6"
 skills = ["TypeScript", "Node", "React"]
 highlights = [
   "Worked on the \"TF1 backoffice\" and \"LCI backoffice\" web applications",
@@ -306,6 +315,7 @@ position = "Front-End Engineer"
 place = "Tokyo, Japan"
 start_date = "2013-11-01T00:00:00.000Z"
 end_date = "2014-08-15T00:00:00.000Z"
+context = "Team of 4"
 skills = ["JavaScript", "PHP"]
 highlights = [
   "Implemented various features in JavaScript",
@@ -334,6 +344,7 @@ position = "Full-Stack Engineer"
 place = "Paris, France"
 start_date = "2012-03-01T00:00:00.000Z"
 end_date = "2012-09-01T00:00:00.000Z"
+context = "Team of 4"
 skills = ["Ruby on Rails", "JavaScript", "jQuery"]
 highlights = [
   "Developed server-side features using **Ruby on Rails**",
