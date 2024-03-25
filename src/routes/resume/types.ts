@@ -42,6 +42,7 @@ export type Work = {
   summary?: string;
   website?: string;
   skills?: string[];
+  context?: string;
 };
 
 export type Resume = {

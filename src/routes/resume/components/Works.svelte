@@ -37,7 +37,7 @@
 
 <div class="works">
   <div class="works-label">Professional Experience</div>
-  {#each works as { position, company, industry, website, place, start_date, end_date, skills, highlights, summary }, i (company)}
+  {#each works as { position, company, industry, website, place, start_date, end_date, skills, context, highlights, summary }, i (company)}
     <div class="works-entry-wrapper">
       {@const odd = i & 1}
       <div class="works-entry" class:pt-8={i > 0}>
@@ -72,6 +72,9 @@
                 : "Present"}
             </div>
           </div>
+          {#if context}
+            <div class="works-context">({context})</div>
+          {/if}
           {#if skills && skills.length > 0}
             <div class="works-skills">
               <span class="works-skills-label">
@@ -155,6 +158,10 @@
 
   .works-dates {
     @apply self-end sm:self-auto shrink-0 text-sm;
+  }
+
+  .works-context {
+    @apply italic text-sm;
   }
 
   .works-skills {
