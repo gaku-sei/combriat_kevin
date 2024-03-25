@@ -33,7 +33,7 @@ key_technologies = [
 ]
 
 [[basics.skills]]
-name = "Web Development"
+name = "Full-Stack Development"
 duration = "12 Years"
 
 [[basics.skills]]
@@ -145,10 +145,10 @@ position = "Senior Full-Stack Engineer"
 place = "Montréal, Canada"
 start_date = "2021-11-14T00:00:00.000Z"
 end_date = "2022-07-01T00:00:00.000Z"
-skills = ["Rust", "TypeScript", "Svelte", "AWS", "Terraform", "Node", "Tauri"]
+skills = ["Rust", "TypeScript", "Svelte", "AWS", "Terraform", "Node", "Tauri", "WebRTC"]
 highlights = [
   "Contributed to cutting-edge tech stack with **Rust**, **TypeScript**, and **Python**",
-  "Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, **Svelte** akin to Unreal or Unity, featuring streaming capabilities akin to Stadia",
+  "Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, **Svelte**, akin to Unreal or Unity, featuring streaming capabilities leveraging **WebRTC** akin to GeForce Now",
   "Developed **REST** and **gRPC** services in Rust, prioritizing minimal memory footprint and CPU usage, and leveraging fully controlled memory management to prevent issues with garbage collection",
   "Engineered advanced command line applications in **Rust**, including code generation for **Rust**, **TypeScript**, and **Python** for all our services based on **OpenAPI**, among other functionalities",
   "Integral part of Telemetry project, focusing on performance analysis and optimization",
@@ -359,7 +359,7 @@ keywords = [
   "**Rust**",
   "**TypeScript**",
   "**Python**",
-  "Go",
+  "**Go**",
   "ReScript",
   "JavaScript",
   "Elm",
@@ -374,9 +374,11 @@ keywords = [
   "**Rust** services and APIs (Actix, Axum, Juniper, Tokio)",
   "**Node** (Express, Fastify, Prisma, Nestjs, Hapi, Koa)",
   "**AWS** (Cognito, ECS, Fargate, Lambda, etc...)",
+  "**Go** (fasthttp, Mux, Gorm, etc...)",
   "**Terraform**",
   "GraphQl (Nexus, TypeGraphql, Absinthe)",
   "Rest services",
+  "WebSocket",
   "**Relational Databases** (MySQL, PostgreSQL, SQLite)",
 ]
 
@@ -386,6 +388,7 @@ keywords = [
   "**React**",
   "**Svelte** & SvelteKit",
   "**Next.js**",
+  "**WebRTC**",
   "Vue",
   "Tailwind",
   "Redux",
@@ -410,7 +413,7 @@ name = "Methodology"
 
 [[skills]]
 name = "Languages used for fun and profit"
-keywords = ["**Elixir**", "Haskell", "Scala", "PureScript"]
+keywords = ["**Kotlin**", "**Elixir**", "Clojure", "Haskell", "Scala", "PureScript"]
 
 [[languages]]
 fluency = "Native"
