@@ -39,7 +39,7 @@
   }
 
   .profile {
-    @apply w-full sm:w-[280px] bg-indigo-100 shrink-0 bg-opacity-70 overflow-auto sticky pb-0;
+    @apply w-full sm:w-[284px] bg-indigo-100 shrink-0 bg-opacity-70 overflow-auto sticky pb-0;
   }
 
   @media print {
@@ -53,7 +53,7 @@
   }
 
   .experience-header-wrapper {
-    @apply hidden sm:flex w-full px-6 pt-2 pb-1 static sm:sticky print:static top-0 z-10 bg-slate-100 print:bg-white;
+    @apply hidden sm:flex w-full static sm:sticky print:static top-0 z-10 bg-slate-100 print:bg-white;
   }
 
   .experience-header {
