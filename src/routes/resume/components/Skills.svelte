@@ -3,7 +3,7 @@
 
   type Props = { skills: Skill[] };
 
-  let { skills } = $props<Props>();
+  let { skills }: Props = $props();
 </script>
 
 <div class="skills">

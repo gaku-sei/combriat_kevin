@@ -8,7 +8,7 @@
 
   type Props = { resume: Resume };
 
-  let { resume } = $props<Props>();
+  let { resume }: Props = $props();
 </script>
 
 <div class="resume">

@@ -1,6 +1,7 @@
 <script lang="ts">
   import "../index.css";
+
+  const { children } = $props();
 </script>
 
-<!-- Using slots instead of snippets here to shut the warning in sveltekit -->
-<slot />
+{@render children()}

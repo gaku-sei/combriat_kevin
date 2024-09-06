@@ -5,7 +5,7 @@
     polygons: (size: number) => { opacity?: number; vertices: Vertices }[];
   };
 
-  let { polygons: polygonsBuilder } = $props<Props>();
+  let { polygons: polygonsBuilder }: Props = $props();
 
   const size = 100;
   const polygons = $derived(polygonsBuilder(size));

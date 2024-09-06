@@ -8,7 +8,7 @@
 
   type Props = { works: Work[] };
 
-  let { works } = $props<Props>();
+  let { works }: Props = $props();
 
   const polygonsLeft = (size: number) => [
     {
@@ -38,8 +38,8 @@
 <div class="works">
   <div class="works-label">Professional Experience</div>
   {#each works as { position, company, industry, website, place, start_date, end_date, skills, context, highlights, summary }, i (company)}
+    {@const odd = i & 1}
     <div class="works-entry-wrapper">
-      {@const odd = i & 1}
       <div class="works-entry" class:pt-8={i > 0}>
         <div class="works-polygons" class:works-polygons-left={odd}>
           {#if odd}

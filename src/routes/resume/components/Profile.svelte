@@ -9,7 +9,7 @@
     profile: Profile;
   };
 
-  let { profile } = $props<Props>();
+  let { profile }: Props = $props();
   let pictureMask = $state<SVGElement>();
 
   const pictureMaskUrl = $derived(

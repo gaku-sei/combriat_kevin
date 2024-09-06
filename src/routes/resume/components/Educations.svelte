@@ -6,7 +6,7 @@
 
   type Props = { educations: Education[] };
 
-  let { educations } = $props<Props>();
+  let { educations }: Props = $props();
 </script>
 
 <div class="educations">

@@ -2,7 +2,9 @@
   import type { PageData } from "./$types";
   import Resume from "../resume/components/Resume.svelte";
 
-  let { data } = $props<{ data: PageData }>();
+  type Props = { data: PageData };
+
+  let { data }: Props = $props();
 </script>
 
 <svelte:head>
