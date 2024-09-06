@@ -115,28 +115,42 @@ company = "Haven Studios - Sony"
 position = "Senior Full-Stack Engineer"
 place = "Remote from Kyoto, Japan"
 start_date = "2022-07-01T00:00:00.000Z"
-context = "Team of 2"
+context = "Team of 5"
 skills = [
   "Rust",
   "Go",
   "TypeScript",
   "Svelte",
   "Node",
-  "AWS",
+  "AWS (ECS, S3, etc...)",
   "Terraform",
   "Python",
   "Arrow",
+  "DataFusion",
   "Parquet",
 ]
 highlights = [
-  "Leading a large-scale **Telemetry** and **Observability** project utilized company-wide at Haven",
-  "Building **high-performance** online services using **Rust**'s memory safety and speed",
-  "Leading front-end architecture using **TypeScript** and **Svelte** for optimal performance in our canvas",
-  "Architecting robust infrastructure on **AWS** with **Terraform** to accommodate potential millions of players",
-  "Developing Big Data system in **Rust** with Parquet, Arrow, and **DataFusion**",
-  "Prioritizing performance and optimization, resulting in significant improvements (front page load time reduced by 95%, allocation-free structured log events with exceptional performance, etc...)",
-  "Playing a pivotal role in **Grafana** plugin development in **Go**, granting team members access to all the resources in our **lakehouse**",
-  "Developing low-level **Rust** **Wasm** plugins for browser use, compatible with our Telemetry architecture and maintaining high performance standards",
+  "**Large-Scale Telemetry and Observability Project**: Led a company-wide project at Haven, including Timeline (spans), Metrics, and Log screens, handling gigabytes of data per process.",
+  "**Infrastructure Management**: Built robust and cost-effective AWS infrastructure using Terraform, including ECS and S3, to accommodate hundreds of thousands of concurrent players.",
+  "**High-Performance Services**: Developed high-performance online services leveraging Rust's memory safety and speed.",
+  "**Big Data Systems**: Utilized Arrow, DataFusion, and Parquet to handle large datasets.",
+  "**Performance and Optimization**: Prioritized performance, using algorithms to handle Level of Detail (LOD), eliminating implicit heap allocations, and maintaining sub-second response times for our custom GUI.",
+  "**Scalability**: Scaled to support Fairgame$, a GaaS designed for hundreds of thousands of concurrent players.",
+  "**Grafana Infrastructure**: Managed the entire Grafana infrastructure, providing access to data lakehouse resources for metrics and KPIs. Developed custom datasources in Go and Rust.",
+  "**Custom GUI for JIT Analysis**: Built a custom GUI for bug and situation analysis with just-in-time (JIT) data access using Arrow and DataFusion.",
+  "**Front-End Architecture**: Led the front-end architecture using TypeScript and Svelte to ensure optimal performance, enabling the display of millions of points in metrics and spans.",
+  "**Wasm Plugins**: Developed low-level Rust Wasm plugins for browser use, ensuring compatibility with our Observability architecture and maintaining high performance standards.",
+  # "**Leading a large-scale Telemetry and Observability project utilized company-wide at Haven:** This tool includes Timeline (spans), Metrics, and Log screens, handling potentially gigabytes of data per process.",
+  # "**Architecting and Managing Infrastructure:** Built robust and cost-effective infrastructure on **AWS** using **Terraform**, including services like ECS, and leveraging S3 and more to accommodate potentially hundreds of thousands of concurrent players.",
+  # "**High-Performance Online Services**: Developed high-performance online services leveraging **Rust**'s memory safety and speed.",
+  # "**Big Data Systems**: To handle our large datasets, the stack heavily relies on **Arrow**, **DataFusion**, and **Parquet**.",
+  # "**Performance and Optimization**: Prioritized performance and optimization, utilizing various algorithms to handle Level of Detail (LOD), eliminating implicit heap allocations even for advanced features such as structured logging (rich events), and maintaining exceptional performance with sub-second response times for our custom GUI.",
+  # "**Scalability and Complexity**: Scaled to support the next game by Haven, **Fairgame$**, a GaaS (Game as a Service) designed to handle hundreds of thousands of concurrent players.",
+  # "**Grafana Infrastructure**: Managed the entire **Grafana** infrastructure, providing team members access to all resources in our data lakehouse for metrics, KPIs, and other critical insights. Developed custom datasources in **Go** and **Rust**.",
+  # "**Custom GUI for JIT Analysis**: Built a custom GUI for bug and situation analysis with just-in-time (JIT) access to the data lakehouse using **Arrow** and **DataFusion**.",
+  # "**Front-End Architecture**: Led the front-end architecture using **TypeScript** and **Svelte** to ensure optimal performance, enabling the display of millions of points in our metrics and spans in our timeline.",
+  # "**Wasm Plugins**: Developed low-level **Rust** Wasm plugins for browser use, ensuring compatibility with our Observability architecture and maintaining high performance standards.",
+
 ]
 website = "https://havenstudios.com/"
 
@@ -158,11 +172,22 @@ skills = [
   "WebRTC",
 ]
 highlights = [
-  "Contributed to cutting-edge tech stack with **Rust**, **TypeScript**, and **Python**",
-  "Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, **Svelte**, akin to Unreal or Unity, featuring streaming capabilities leveraging **WebRTC** akin to GeForce Now",
-  "Developed **REST** and **gRPC** services in Rust, prioritizing minimal memory footprint and CPU usage, and leveraging fully controlled memory management to prevent issues with garbage collection",
-  "Engineered advanced command line applications in **Rust**, including code generation for **Rust**, **TypeScript**, and **Python** for all our services based on **OpenAPI**, among other functionalities",
-  "Integral part of Telemetry project, focusing on performance analysis and optimization",
+  "**Contributed to a cutting-edge tech stack with Rust, TypeScript, and Python.**",
+  "**Game Engine GUI Application**: Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, and **Svelte**, featuring very low latency streaming capabilities leveraging **WebRTC**, similar to GeForce Now.",
+  "**REST and gRPC Services**: Developed **REST** and **gRPC** services in **Rust**, prioritizing minimal memory footprint and CPU usage, and leveraging fully controlled memory management to avoid garbage collection.",
+  "**Command Line Applications**: Engineered advanced command line applications in **Rust**, including code generation for **Rust**, **TypeScript**, and **Python** based on **OpenAPI**.",
+  "**Telemetry Project**: Played an integral part in the **Telemetry** project, focusing on performance analysis and optimization.",
+  "**WebRTC Streaming**: Implemented **WebRTC** for very low latency streaming from the engine in **Rust** to the client.",
+  "**Communication Protocols**: Explored **HTTP/3** and **WebTransport** to enhance communication and reduce latency to less than 3-4 frames.",
+  "**Rich Applications**: Developed rich applications with multiple widgets, from color picking to complex forms, including a script editor.",
+  # "Contributed to a cutting-edge tech stack with **Rust**, **TypeScript**, and **Python**.",
+  # "**Game Engine GUI Application**: Led the design and development of a game engine GUI application using **Rust**, **Tauri**, **TypeScript**, and **Svelte**, akin to Unreal or Unity, featuring very low latency streaming capabilities leveraging **WebRTC**, similar to GeForce Now.",
+  # "**REST and gRPC Services**: Developed **REST** and **gRPC** services in **Rust**, prioritizing minimal memory footprint and CPU usage, and leveraging fully controlled memory management to avoid garbage collection.",
+  # "**Command Line Applications**: Engineered advanced command line applications in **Rust**, including code generation for **Rust**, **TypeScript**, and **Python** for all our services based on **OpenAPI**, among other functionalities.",
+  # "**Telemetry Project**: Played an integral part in the Telemetry project, focusing on performance analysis and optimization.",
+  # "**WebRTC Streaming**: Implemented **WebRTC** for very low latency streaming from the engine in **Rust** to the client.",
+  # "**Communication Protocols**: Explored **HTTP/3** and **WebTransport** to enhance communication and reduce latency to less than 3-4 frames.",
+  # "**Rich Applications**: Developed rich applications with multiple widgets, from color picking to complex forms, including a script editior.",
 ]
 website = "https://legionlabs.com/"
 
