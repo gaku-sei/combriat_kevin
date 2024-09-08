@@ -1,5 +1,5 @@
 export type Profile = {
-  about: string;
+  about: string[];
   email: string;
   first_name: string;
   key_skills?: string[];
@@ -34,7 +34,7 @@ export type Skill = {
 export type Work = {
   company: string;
   end_date?: string;
-  highlights: string[];
+  highlights: string[] | [label: string, explanation?: string][];
   industry: string;
   place: string;
   position: string;

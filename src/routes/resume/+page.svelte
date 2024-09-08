@@ -15,6 +15,6 @@
 
 <style lang="postcss">
   .root {
-    @apply flex justify-center bg-slate-900 text-slate-900;
+    @apply flex justify-center;
   }
 </style>

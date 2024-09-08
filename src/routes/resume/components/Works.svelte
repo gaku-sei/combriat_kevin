@@ -36,7 +36,7 @@
 </script>
 
 <div class="works">
-  <div class="works-label">Professional Experience</div>
+  <div class="works-label">Work Experience</div>
   {#each works as { position, company, industry, website, place, start_date, end_date, skills, context, highlights, summary }, i (company)}
     {@const odd = i & 1}
     <div class="works-entry-wrapper">
@@ -88,7 +88,22 @@
           {/if}
           <ul class="works-highlights">
             {#each highlights as highlight}
-              <li>{@html highlight}</li>
+              {#if Array.isArray(highlight)}
+                {@const hasExplanation =
+                  typeof highlight[1] === "string" && highlight[1].length > 0}
+                <li>
+                  <span>
+                    <span class="font-semibold text-indigo-800">
+                      {@html highlight[0]}{#if hasExplanation}:{/if}
+                    </span>
+                    {#if hasExplanation}
+                      <span class="text-sm">{@html highlight[1]}</span>
+                    {/if}
+                  </span>
+                </li>
+              {:else}
+                <li>{@html highlight}</li>
+              {/if}
             {/each}
           </ul>
           {#if summary}
@@ -149,15 +164,17 @@
   }
 
   .works-position {
-    @apply font-semibold text-xl text-indigo-400;
+    @apply font-semibold text-xl text-indigo-500;
   }
 
   .works-position-details {
-    @apply flex flex-col sm:flex-row justify-center sm:justify-between sm:items-center font-semibold text-lg pt-4 gap-2;
+    @apply flex flex-col justify-center font-semibold text-lg pt-4 gap-2;
+    @apply sm:flex-row sm:justify-between sm:items-center;
   }
 
   .works-dates {
-    @apply self-end sm:self-auto shrink-0 text-sm;
+    @apply self-end shrink-0 text-sm;
+    @apply sm:self-auto;
   }
 
   .works-context {
@@ -165,7 +182,7 @@
   }
 
   .works-skills {
-    @apply px-6 py-4 text-center;
+    @apply px-6 py-4 text-center text-2xl leading-3;
   }
 
   .works-skills-label {
@@ -177,7 +194,7 @@
   }
 
   .works-highlights {
-    @apply list-disc list-inside pt-2;
+    @apply list-disc list-inside pt-1 text-sm text-justify;
   }
 
   .works-summary {

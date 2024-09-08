@@ -50,27 +50,21 @@
     @apply relative;
   }
 
-  .educations-polygons {
-    @apply absolute right-0 top-28 w-40 h-44;
-  }
-
-  .educations-polygons-left {
-    @apply left-0;
-  }
-
   .educations-content {
     @apply px-8;
   }
 
   .educations-institution {
-    @apply pt-8 font-semibold text-xl text-indigo-400;
+    @apply pt-8 font-semibold text-xl text-indigo-500;
   }
 
   .educations-institution-details {
-    @apply flex flex-col sm:flex-row justify-center sm:justify-between sm:items-center font-semibold text-lg pt-4;
+    @apply flex flex-col justify-center font-semibold text-lg pt-4;
+    @apply sm:flex-row sm:justify-between sm:items-center;
   }
 
   .educations-dates {
-    @apply self-end sm:self-auto shrink-0 text-sm;
+    @apply self-end shrink-0 text-sm;
+    @apply sm:self-auto;
   }
 </style>
