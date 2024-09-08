@@ -12,11 +12,13 @@
   html {
     font-family: "Nunito", system-ui, sans-serif;
     font-size: 16px;
+    @apply bg-slate-50 text-slate-900;
   }
 
   @media print {
     html {
-      font-size: 11px;
+      font-size: 12px;
+      @apply bg-white;
     }
   }
 }

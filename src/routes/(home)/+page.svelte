@@ -2,7 +2,9 @@
   import type { PageData } from "./$types";
   import Resume from "../resume/components/Resume.svelte";
 
-  let { data } = $props<{ data: PageData }>();
+  type Props = { data: PageData };
+
+  let { data }: Props = $props();
 </script>
 
 <svelte:head>
@@ -15,6 +17,6 @@
 
 <style lang="postcss">
   .root {
-    @apply flex justify-center bg-slate-900 text-slate-700;
+    @apply flex justify-center text-slate-700;
   }
 </style>

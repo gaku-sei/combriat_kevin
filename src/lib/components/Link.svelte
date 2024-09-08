@@ -6,7 +6,7 @@
     href: string;
   };
 
-  let { children, href } = $props<Props>();
+  let { children, href }: Props = $props();
 
   const external = $derived(
     href.startsWith("http://") || href.startsWith("https://"),
@@ -24,7 +24,7 @@
 
 <style lang="postcss">
   .link {
-    @apply text-indigo-400 font-semibold underline;
+    @apply text-indigo-500 font-semibold underline;
   }
 
   .link:hover {

@@ -9,7 +9,7 @@
     profile: Profile;
   };
 
-  let { profile } = $props<Props>();
+  let { profile }: Props = $props();
   let pictureMask = $state<SVGElement>();
 
   const pictureMaskUrl = $derived(
@@ -59,9 +59,15 @@
       {profile.position}
     </div>
 
-    <div class="profile-about">
-      <em>{@html profile.about}</em>
-    </div>
+    {#if profile.about.length > 0}
+      <div class="profile-about">
+        {#each profile.about as about}
+          <div class="profile-about-entry">
+            <em>{@html about}</em>
+          </div>
+        {/each}
+      </div>
+    {/if}
 
     <div class="profile-contacts">
       <div class="profile-contacts-title">Contacts</div>
@@ -104,7 +110,8 @@
 
 <style lang="postcss">
   .profile {
-    @apply w-full flex flex-col pb-8 sm:pb-0;
+    @apply w-full flex flex-col pb-8 bg-indigo-100;
+    @apply sm:pb-0 sm:bg-transparent;
   }
 
   .portrait-img-wrapper {
@@ -126,22 +133,34 @@
 
   .profile-content {
     @apply w-full px-6 flex flex-col;
+    @apply sm:px-2;
+    @apply print:px-6;
   }
 
   .profile-name {
-    @apply w-full pt-12 text-center text-5xl font-semibold sm:hidden;
+    @apply w-full pt-12 text-center text-4xl font-semibold;
+    @apply sm:pt-4 sm:text-left sm:font-bold;
+    @apply print:pt-6;
   }
 
   .profile-position {
-    @apply w-full pt-2 text-center text-2xl font-semibold text-indigo-400 sm:hidden;
+    @apply w-full pt-2 text-center text-2xl text-indigo-500;
+    @apply sm:text-left sm:text-xl;
   }
 
   .profile-about {
-    @apply w-full pt-8 px-2 sm:px-0 indent-8 text-xl sm:text-base font-semibold;
+    @apply w-full pt-8 px-2 text-xl font-semibold text-justify;
+    @apply sm:px-0 sm:text-base;
+  }
+
+  .profile-about-entry {
+    @apply w-full indent-8;
+    @apply sm:px-0;
   }
 
   .profile-contacts {
-    @apply pt-12 sm:pt-8;
+    @apply pt-12;
+    @apply sm:pt-8;
   }
 
   .profile-contacts-title {
@@ -149,15 +168,17 @@
   }
 
   .profile-contacts-content {
-    @apply list-disc list-inside text-xl sm:text-sm;
+    @apply list-disc list-inside text-xl;
+    @apply sm:text-sm;
   }
 
   .profile-contacts-address {
-    @apply text-indigo-400;
+    @apply text-indigo-500;
   }
 
   .profile-skills {
-    @apply pt-12 sm:pt-8;
+    @apply pt-12;
+    @apply sm:pt-8;
   }
 
   .profile-skills-title {
@@ -165,7 +186,8 @@
   }
 
   .profile-skills-content {
-    @apply list-disc list-inside text-xl sm:text-sm;
+    @apply list-disc list-inside text-xl;
+    @apply sm:text-sm;
   }
 
   .profile-skills-content-name {

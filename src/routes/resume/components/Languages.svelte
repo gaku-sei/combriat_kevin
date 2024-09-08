@@ -3,7 +3,7 @@
 
   type Props = { languages: Language[] };
 
-  let { languages } = $props<Props>();
+  let { languages }: Props = $props();
 </script>
 
 <div class="languages">
