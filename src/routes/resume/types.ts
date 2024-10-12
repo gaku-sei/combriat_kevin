@@ -31,10 +31,12 @@ export type Skill = {
   keywords: string[];
 };
 
+export type Highlight = string | [label: string, explanation?: string];
+
 export type Work = {
   company: string;
   end_date?: string;
-  highlights: string[] | [label: string, explanation?: string][];
+  highlights: Highlight[];
   industry: string;
   place: string;
   position: string;
