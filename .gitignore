@@ -9,3 +9,4 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /src/lib/assets/resume.old*.toml
+/generated-docs
