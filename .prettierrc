@@ -1,5 +1,17 @@
 {
-  "plugins": ["prettier-plugin-svelte", "prettier-plugin-toml"],
-  "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }],
-  "endOfLine": "lf"
+  "useTabs": false,
+  "singleQuote": false,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
+  ],
+  "tailwindStylesheet": "./src/app.css"
 }
