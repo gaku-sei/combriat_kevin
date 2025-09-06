@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { asset } from "$app/paths";
   import {
     Mail,
     MapPin,
@@ -14,13 +15,6 @@
   } from "lucide-svelte";
 </script>
 
-<div
-  class="text-md pointer-events-none sticky top-4 ml-auto flex justify-end gap-x-1 bg-transparent pr-6 md:text-sm print:hidden"
->
-  <a href="/" class="pointer-events-auto hover:underline">EN</a> /
-  <a href="/fr" class="pointer-events-auto hover:underline">FR</a>
-</div>
-
 <div class="flex min-h-screen justify-center print:bg-white">
   <div
     class="my-0 flex w-full flex-col bg-white px-8 py-8 lg:my-6 lg:w-[1000px] lg:shadow-xl print:my-0 print:h-full print:shadow-none"
@@ -30,7 +24,7 @@
     >
       <img
         class="h-32 w-32 shrink-0 rounded-full object-cover shadow-md"
-        src="mwa.png"
+        src={asset("/mwa.png")}
         alt="COMBRIAT Kévin"
       />
 
